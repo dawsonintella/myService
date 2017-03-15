@@ -18,7 +18,7 @@ public class MyService implements MessageListener {
     }
  
     public MyService() {
-        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://10.0.0.55:61616");
         Connection connection;
         try {
             connection = connectionFactory.createConnection();
@@ -66,7 +66,7 @@ public class MyService implements MessageListener {
         return Long.toHexString(randomLong);
     }
  
-    public void onMessage(Message message) {
+    public  void onMessage(Message message) {
         String messageText = null;
         try {
             if (message instanceof TextMessage) {
