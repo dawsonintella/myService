@@ -18,7 +18,7 @@ public class MyService implements MessageListener {
     }
  
     public MyService() {
-        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://10.0.0.41:61616");
+        ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
         Connection connection;
         try {
             connection = connectionFactory.createConnection();
